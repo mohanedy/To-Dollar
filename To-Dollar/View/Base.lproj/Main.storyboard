@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Converter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ConverterViewController" customModule="To_Dollar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iYM-JT-e3N">
+                                <rect key="frame" x="0.0" y="54" width="414" height="226"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Dollar Converter 💵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWP-ry-k00">
+                                        <rect key="frame" x="63.666666666666657" y="0.0" width="287" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fB5-Xa-jCS">
+                                        <rect key="frame" x="10" y="51" width="394" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xaE-Nt-Zwn">
+                                                <rect key="frame" x="10" y="0.0" width="374" height="80"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar-sign" translatesAutoresizingMaskIntoConstraints="NO" id="bKc-yc-dYK">
+                                                        <rect key="frame" x="0.0" y="5" width="70" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="B78-45-1yn"/>
+                                                            <constraint firstAttribute="height" constant="70" id="I61-jP-ohH"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Value in USD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YY0-9E-ueF">
+                                                        <rect key="frame" x="90" y="29.666666666666657" width="228" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                        <connections>
+                                                            <action selector="onTextChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="hGF-II-RnH"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orw-is-Fx7">
+                                                        <rect key="frame" x="338" y="30" width="36" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="xaE-Nt-Zwn" secondAttribute="bottom" id="4ES-gq-Eik"/>
+                                            <constraint firstItem="xaE-Nt-Zwn" firstAttribute="leading" secondItem="fB5-Xa-jCS" secondAttribute="leading" constant="10" id="6ZT-8M-qA4"/>
+                                            <constraint firstAttribute="height" constant="80" id="JTh-Ct-spV"/>
+                                            <constraint firstAttribute="trailing" secondItem="xaE-Nt-Zwn" secondAttribute="trailing" constant="10" id="LnD-9X-jPg"/>
+                                            <constraint firstItem="xaE-Nt-Zwn" firstAttribute="top" secondItem="fB5-Xa-jCS" secondAttribute="top" id="khQ-Li-NTg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ab-62-bCM">
+                                        <rect key="frame" x="10" y="146" width="394" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qPd-oT-ngu">
+                                                <rect key="frame" x="10" y="0.0" width="374" height="80"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-VY-LAP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="qaN-Ux-s5d"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Value in EGP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUY-A1-DJB">
+                                                        <rect key="frame" x="80" y="0.0" width="250" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                        <connections>
+                                                            <action selector="onTextChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="f94-Nz-sIG"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dT-nx-XEX">
+                                                        <rect key="frame" x="340" y="0.0" width="34" height="80"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="qPd-oT-ngu" secondAttribute="trailing" constant="10" id="OOu-VV-ed0"/>
+                                            <constraint firstAttribute="bottom" secondItem="qPd-oT-ngu" secondAttribute="bottom" id="ao3-rr-g0h"/>
+                                            <constraint firstItem="qPd-oT-ngu" firstAttribute="leading" secondItem="7ab-62-bCM" secondAttribute="leading" constant="10" id="egE-Qj-BFv"/>
+                                            <constraint firstAttribute="height" constant="80" id="xZA-xg-nlX"/>
+                                            <constraint firstItem="qPd-oT-ngu" firstAttribute="top" secondItem="7ab-62-bCM" secondAttribute="top" id="zwu-ds-oH5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7ab-62-bCM" firstAttribute="leading" secondItem="iYM-JT-e3N" secondAttribute="leading" constant="10" id="3V5-QA-3T3"/>
+                                    <constraint firstItem="fB5-Xa-jCS" firstAttribute="leading" secondItem="iYM-JT-e3N" secondAttribute="leading" constant="10" id="BeH-kq-O8V"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ab-62-bCM" secondAttribute="trailing" constant="10" id="L8p-TH-P0l"/>
+                                    <constraint firstAttribute="trailing" secondItem="fB5-Xa-jCS" secondAttribute="trailing" constant="10" id="QV2-6q-TF8"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2z-Vf-G3Q">
+                                <rect key="frame" x="10" y="646" width="394" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" name="background color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iYM-JT-e3N" secondAttribute="trailing" id="AVO-3B-n8H"/>
+                            <constraint firstItem="iYM-JT-e3N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="MYV-Gj-hNG"/>
+                            <constraint firstAttribute="trailing" secondItem="d2z-Vf-G3Q" secondAttribute="trailing" constant="10" id="Wbl-cZ-FIJ"/>
+                            <constraint firstItem="iYM-JT-e3N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ye6-Xm-SzK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d2z-Vf-G3Q" secondAttribute="bottom" id="buB-zu-al2"/>
+                            <constraint firstItem="d2z-Vf-G3Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="tko-Gi-0BF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="currencyLabel" destination="5dT-nx-XEX" id="cWK-Ha-W5E"/>
+                        <outlet property="currencyPicker" destination="d2z-Vf-G3Q" id="V8I-cb-TOt"/>
+                        <outlet property="currencyTextField" destination="MUY-A1-DJB" id="tK5-8I-bXz"/>
+                        <outlet property="dollarTextField" destination="YY0-9E-ueF" id="gKn-A6-bJ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="123.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coin" width="512" height="512"/>
+        <image name="dollar-sign" width="512" height="512"/>
+        <namedColor name="background color">
+            <color red="0.8666666666666667" green="0.89411764705882346" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
